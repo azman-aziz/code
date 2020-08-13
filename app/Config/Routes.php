@@ -30,17 +30,30 @@ $routes->setAutoRoute(true);
 
 // We get a performance increase by specifying the default
 // route since we don't have to scan directories.
-$routes->get('/', 'Home::index');
-$routes->get('/coba', 'Coba::index');
-$routes->get('/coba/oke', 'Coba::oke');
-
-$routes->get('/admin', 'Admin\Users::index');
+$routes->get('/', 'Pages::index');
+$routes->get('/about','Pages::about');
 
 
-// (:any) = apapun yang di ketikan users
-// $1 = di gunakan untuk menangkap data yang di kirim dari (:any) pada url
-//
-$routes->get('/about/(:any)', 'Coba::oke/$1');
+
+
+
+
+
+
+
+
+
+
+// $routes->get('/coba', 'Coba::index');
+// $routes->get('/coba/oke', 'Coba::oke');
+
+// $routes->get('/admin', 'Admin\Users::index');
+
+
+// // (:any) = apapun yang di ketikan users
+// // $1 = di gunakan untuk menangkap data yang di kirim dari (:any) pada url
+// //
+// $routes->get('/about/(:any)', 'Coba::oke/$1');
 
 
 // $routes->get('/coba', 'Coba::oke');
